@@ -22,7 +22,7 @@ const OAuthSignIn = () => {
   return (
     <Button
       onClick={loginWithGoogle}
-      aria-label='Sign in with google'
+      aria-label='Acessar com o Google'
       variant='outline'
       className='w-full bg-background sm:w-auto'
       isLoading={isLoading}

@@ -36,7 +36,7 @@ const Filter: React.FC<FilterProps> = ({ categories, className, ...props }) => {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button className='flex items-center gap-x-2'>
-            Filters
+            Filtros
             <Plus />
           </Button>
         </SheetTrigger>

@@ -3,7 +3,7 @@ import { Skeleton } from '@/components/ui/Skeleton'
 const CartSkeleton = () => {
   return (
     <div className='px-4 sm:px-6 lg:px-8 py-16'>
-      <h1 className='text-3xl font-bold text-black'>Shopping Cart</h1>
+      <h1 className='text-3xl font-bold text-black'>Carrinho de Compras</h1>
       <div className='mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12'>
         <ul className='lg:col-span-7'>
           {Array.from({ length: 2 }).map((_, i) => (

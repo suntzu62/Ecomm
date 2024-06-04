@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
                 size: 'sm',
               })}
             >
-              Sign In
+              Login
               <span className='sr-only'>Sign In</span>
             </Link>
           )}

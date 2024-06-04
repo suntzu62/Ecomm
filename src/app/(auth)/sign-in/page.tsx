@@ -14,9 +14,9 @@ export default async function SignInPage() {
     <div className='mx-auto'>
       <Card className='w- xl:w-[500px]'>
         <CardHeader className='space-y-1'>
-          <CardTitle className='text-2xl'>Sign in</CardTitle>
+          <CardTitle className='text-2xl'>Login</CardTitle>
           <CardDescription>
-            Choose your preferred sign in method
+          Escolha seu método de login preferido
           </CardDescription>
         </CardHeader>
         <CardContent className='grid grid-cols-1'>
@@ -25,13 +25,13 @@ export default async function SignInPage() {
         <CardFooter className='flex flex-wrap items-center justify-between gap-2'>
           <div className='text-sm text-muted-foreground'>
             <span className='mr-1 inline-block'>
-              Don&apos;t have an account?
+              Não tem uma conta?
             </span>
             <Link
               aria-label='Sign up'
               href='/sign-up'
               className='text-primary underline-offset-4 transition-colors hover:underline'>
-              Sign up
+              Cadastrar-se
             </Link>
           </div>
         </CardFooter>

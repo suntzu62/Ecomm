@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Product } from '@prisma/client'
-import axios from 'axios'
-import { useParams } from 'next/navigation'
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Product } from "@prisma/client";
+import axios from "axios";
+import { useParams } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
-import { Button } from '@/components/ui/Button'
+import { Button } from "@/components/ui/Button";
 import {
   Form,
   FormControl,
@@ -16,24 +16,24 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/Form'
-import { Input } from '@/components/ui/Input'
+} from "@/components/ui/Form";
+import { Input } from "@/components/ui/Input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/Select'
-import { Textarea } from '@/components/ui/Textarea'
-import { productPayload, productSchema } from '@/lib/validators/product'
+} from "@/components/ui/Select";
+import { Textarea } from "@/components/ui/Textarea";
+import { productPayload, productSchema } from "@/lib/validators/product";
 
-import { FileUpload } from './FileUpload'
+import { FileUpload } from "./FileUpload";
 
 export function UpdateProductForm({ product }: { product: Product }) {
-  const params = useParams()
+  const params = useParams();
 
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const form = useForm<productPayload>({
     resolver: zodResolver(productSchema),
@@ -45,39 +45,39 @@ export function UpdateProductForm({ product }: { product: Product }) {
       // @ts-ignore
       images: product.images,
     },
-  })
+  });
 
   const onSubmit = async (values: productPayload) => {
     try {
-      setIsLoading(true)
+      setIsLoading(true);
       await axios.patch(
         `/api/stores/${params.storeId}/products/${product.id}`,
-        values,
-      )
-      toast.success('Product has been updated.')
-      window.location.assign(`/dashboard/stores/${params.storeId}`)
+        values
+      );
+      toast.success("Product has been updated.");
+      window.location.assign(`/dashboard/stores/${params.storeId}`);
     } catch (error: any) {
-      toast.error(error.response.data)
+      toast.error(error.response.data);
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Form {...form}>
       <form
-        className='grid w-full max-w-xl gap-5'
+        className="grid w-full max-w-xl gap-5"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <FormField
           control={form.control}
-          name='name'
+          name="name"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input
-                  placeholder='Type product name here.'
+                  placeholder="Type product name here."
                   disabled={isLoading}
                   {...field}
                 />
@@ -88,13 +88,13 @@ export function UpdateProductForm({ product }: { product: Product }) {
         />
         <FormField
           control={form.control}
-          name='description'
+          name="description"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Type product description here.'
+                  placeholder="Type product description here."
                   disabled={isLoading}
                   {...field}
                 />
@@ -103,12 +103,12 @@ export function UpdateProductForm({ product }: { product: Product }) {
             </FormItem>
           )}
         />
-        <div className='flex flex-col items-start gap-6 sm:flex-row'>
+        <div className="flex flex-col items-start gap-6 sm:flex-row">
           <FormField
             control={form.control}
-            name='category'
+            name="category"
             render={({ field }) => (
-              <FormItem className='flex-1 w-full'>
+              <FormItem className="flex-1 w-full">
                 <FormLabel>Category</FormLabel>
                 <Select
                   value={field.value}
@@ -118,14 +118,14 @@ export function UpdateProductForm({ product }: { product: Product }) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder='Select a category' />
+                      <SelectValue placeholder="Select a category" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value='skateboards'>Skateboards</SelectItem>
-                    <SelectItem value='clothing'>Clothing</SelectItem>
-                    <SelectItem value='shoes'>Shoes</SelectItem>
-                    <SelectItem value='accessories'>Accessories</SelectItem>
+                    <SelectItem value="skateboards">Produtos</SelectItem>
+                    <SelectItem value="clothing">Roupas</SelectItem>
+                    <SelectItem value="shoes">Sapatos</SelectItem>
+                    <SelectItem value="accessories">Acessórios</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -134,19 +134,19 @@ export function UpdateProductForm({ product }: { product: Product }) {
           />
           <FormField
             control={form.control}
-            name='price'
+            name="price"
             render={({ field }) => (
-              <FormItem className='flex-1 w-full'>
-                <FormLabel>Price</FormLabel>
+              <FormItem className="flex-1 w-full">
+                <FormLabel>Preço</FormLabel>
                 <FormControl>
-                  <div className='relative'>
-                    <p className='absolute text-sm left-0 w-8 inset-y-0 grid place-items-center'>
-                      Rp
+                  <div className="relative">
+                    <p className="absolute text-sm left-0 w-8 inset-y-0 grid place-items-center">
+                      R$
                     </p>
                     <Input
-                      type='number'
-                      className='pl-8'
-                      placeholder='0'
+                      type="number"
+                      className="pl-8"
+                      placeholder="0"
                       disabled={isLoading}
                       {...field}
                     />
@@ -159,13 +159,13 @@ export function UpdateProductForm({ product }: { product: Product }) {
         </div>
         <FormField
           control={form.control}
-          name='images'
+          name="images"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Images</FormLabel>
+              <FormLabel>Imagens</FormLabel>
               <FormControl>
                 <FileUpload
-                  endpoint='imageUploader'
+                  endpoint="imageUploader"
                   value={field.value}
                   onChange={(file) =>
                     field.value
@@ -184,10 +184,10 @@ export function UpdateProductForm({ product }: { product: Product }) {
           )}
         />
         <Button isLoading={isLoading}>
-          Update Product
-          <span className='sr-only'>Update Product</span>
+          Atualizar produtos
+          <span className="sr-only">Atualizar Produtos</span>
         </Button>
       </form>
     </Form>
-  )
+  );
 }

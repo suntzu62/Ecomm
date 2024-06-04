@@ -8,10 +8,10 @@ import ClientProvider from '@/providers/ClientProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Skaters',
-  description: 'An open source e-commerce project built by inifarhan',
+  title: 'Store Shop',
+  description: 'Store Shop',
   category: 'ecommerce',
-  authors: { name: 'inifarhan' },
+  authors: { name: 'gabriel' },
   keywords: [
     'Next.js',
     'React',
@@ -21,20 +21,20 @@ export const metadata: Metadata = {
     'Accessories',
     'Clothing',
   ],
-  creator: 'Muhammad Farhan Gunawan',
-  publisher: 'Muhammad Farhan Gunawan',
+  creator: 'Gabriel Andrade Dos Santos',
+  publisher: 'Gabriel Andrade Dos Santos',
   openGraph: {
-    title: 'Skaters',
-    description: 'An open source e-commerce project built by inifarhan',
+    title: 'Store Shop',
+    description: 'Um Ecommerce construido por Gabriel',
     url: 'https://skaters-inifarhan.vercel.app/',
-    siteName: 'Skaters',
+    siteName: 'Store Shop',
     images: 'https://skaters-inifarhan.vercel.app/images/screenshoot.PNG',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Skaters',
-    description: 'An open source e-commerce project built by inifarhan',
+    title: 'Store Shop',
+    description: 'Um Ecommerce construido por Gabriel',
     images: ['https://skaters-inifarhan.vercel.app/images/screenshoot.PNG'],
   },
 }

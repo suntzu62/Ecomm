@@ -28,7 +28,7 @@ export default async function AuthLayout({ children }: React.PropsWithChildren) 
           href='/'
           className='absolute left-4 top-4 sm:left-8 sm:top-6 z-20 flex items-center text-lg font-bold tracking-tight'>
           <Icons.logo className='mr-2 h-6 w-6' aria-hidden='true' />
-          <span>Skaters</span>
+          <span>Store Shop</span>
         </Link>
         <div className='absolute bottom-6 left-8 z-20 line-clamp-1 text-base'>
           Photo by{' '}

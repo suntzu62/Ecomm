@@ -4,25 +4,25 @@ const prisma = new PrismaClient()
 async function main() {
   const skateboards = await prisma.category.create({
     data: {
-      name: 'Skateboards',
+      name: 'Produtos',
       slug: 'skateboards',
     },
   })
   const clothing = await prisma.category.create({
     data: {
-      name: 'Clothing',
+      name: 'Roupas',
       slug: 'clothing',
     },
   })
   const shoes = await prisma.category.create({
     data: {
-      name: 'Shoes',
+      name: 'Sapatos',
       slug: 'shoes',
     },
   })
   const accessories = await prisma.category.create({
     data: {
-      name: 'Accessories',
+      name: 'Acessórios',
       slug: 'accessories',
     },
   })

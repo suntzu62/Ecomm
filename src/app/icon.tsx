@@ -16,7 +16,7 @@ export default function Icon() {
     (
       // ImageResponse JSX element
       <div tw='flex h-full w-full items-center justify-center bg-black text-[24px] leading-8 text-white'>
-        S
+        G
       </div>
     ),
     // ImageResponse options

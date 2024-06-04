@@ -118,10 +118,10 @@ export function AddProductForm() {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value='skateboards'>Skateboards</SelectItem>
-                    <SelectItem value='clothing'>Clothing</SelectItem>
-                    <SelectItem value='shoes'>Shoes</SelectItem>
-                    <SelectItem value='accessories'>Accessories</SelectItem>
+                    <SelectItem value='skateboards'>Produtos</SelectItem>
+                    <SelectItem value='clothing'>Roupas</SelectItem>
+                    <SelectItem value='shoes'>Sapatos</SelectItem>
+                    <SelectItem value='accessories'>Acessórios</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -133,11 +133,11 @@ export function AddProductForm() {
             name='price'
             render={({ field }) => (
               <FormItem className='flex-1 w-full'>
-                <FormLabel>Price</FormLabel>
+                <FormLabel>Preço</FormLabel>
                 <FormControl>
                   <div className='relative'>
                     <p className='absolute text-sm left-0 w-8 inset-y-0 grid place-items-center'>
-                      Rp
+                      R$
                     </p>
                     <Input
                       type='number'
@@ -158,7 +158,7 @@ export function AddProductForm() {
           name='images'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Images</FormLabel>
+              <FormLabel>Imagens</FormLabel>
               <FormControl>
                 <FileUpload
                   endpoint='imageUploader'
@@ -180,8 +180,8 @@ export function AddProductForm() {
           )}
         />
         <Button isLoading={isLoading}>
-          Add Product
-          <span className='sr-only'>Add Product</span>
+          Add Produtos
+          <span className='sr-only'>Add Produtos</span>
         </Button>
       </form>
     </Form>
