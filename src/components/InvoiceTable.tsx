@@ -22,16 +22,16 @@ const InvoiceTable: React.FC<InvoiceTableProps> = ({ orderItems }) => {
   }, [])
 
   if (!isMounted) {
-    return <p className='my-8'>Loading...</p>
+    return <p className='my-8'>Carregando...</p>
   }
 
   return (
     <table className='sm:text-left text-center text-xs sm:text-base w-full'>
       <tr>
-        <th className='py-2'>Product name</th>
-        <th>Store Name</th>
-        <th>Quantity</th>
-        <th>Price</th>
+        <th className='py-2'>Nome do Produto</th>
+        <th>Nome da loja</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
       </tr>
       {orderItems.map((item) => (
         <tr key={item.id} className='border-t border-b'>

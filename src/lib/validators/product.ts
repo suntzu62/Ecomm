@@ -20,8 +20,8 @@ export const productSchema = z.object({
     .number({
       required_error: 'Price must be filled',
     })
-    .min(1000, {
-      message: 'Price must be greater than or equal to Rp 1.000',
+    .min(10, {
+      message: 'O preço deve ser maior ou igual a R$ 10,00',
     })
     .max(100000000, {
       message: 'Price must be lower than or equal to Rp 100.000.000',

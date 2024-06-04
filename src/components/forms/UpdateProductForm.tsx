@@ -40,7 +40,7 @@ export function UpdateProductForm({ product }: { product: Product }) {
     defaultValues: {
       name: product.name,
       description: product.description!,
-      category: product.categoryId,
+      category: product.categoryId ?? undefined,
       price: parseFloat(String(product.price)),
       // @ts-ignore
       images: product.images,
@@ -118,7 +118,7 @@ export function UpdateProductForm({ product }: { product: Product }) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a category" />
+                      <SelectValue placeholder="Selecionar Categoria" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>

@@ -21,22 +21,22 @@ export async function POST(req: Request) {
       lower: true,
     })
 
-    const isStoreExist = await prisma.store.findUnique({
+    const isStoreExist = await prisma.store.findFirst({
       where: {
-        id: slug,
+        slug: slug,
       },
-    })
+    });
 
     if (isStoreExist) {
-      return new Response('Store name is already exist', { status: 409 })
+      return new Response('O nome da loja já existe', { status: 409 })
     }
 
     await prisma.store.create({
       data: {
-        id: slug,
         name,
         description,
         userId: session.user.id,
+        slug: slug,
       },
     })
 

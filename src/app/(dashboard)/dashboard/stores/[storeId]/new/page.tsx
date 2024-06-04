@@ -14,8 +14,8 @@ const NewProductPage = () => {
       aria-labelledby='new-product-page-form-heading'
     >
       <CardHeader className='space-y-1'>
-        <CardTitle className='text-2xl'>Add product</CardTitle>
-        <CardDescription>Add a new product to your store</CardDescription>
+        <CardTitle className='text-2xl'>Adicionar produto</CardTitle>
+        <CardDescription>Adicione um novo produto à sua loja</CardDescription>
       </CardHeader>
       <CardContent>
         <AddProductForm />

@@ -23,7 +23,7 @@ export function SidebarNav() {
               )}
             >
               <ShoppingBag className='mr-2 h-4 w-4' aria-hidden='true' />
-              <span>Orders</span>
+              <span>Pedidos</span>
             </span>
           </Link>
         </li>
@@ -38,7 +38,7 @@ export function SidebarNav() {
               )}
             >
               <Store className='mr-2 h-4 w-4' aria-hidden='true' />
-              <span>Stores</span>
+              <span>Lojas</span>
             </span>
           </Link>
         </li>

@@ -14,22 +14,22 @@ export function OrderTabs() {
 
   const tabs = [
     {
-      title: 'All',
+      title: 'Tudo',
       href: `/dashboard/orders`,
       isActive: status === null,
     },
     {
-      title: 'Pending',
+      title: 'Pendente',
       href: `/dashboard/orders?status=PENDING`,
       isActive: status === 'PENDING',
     },
     {
-      title: 'Paid',
+      title: 'Pago',
       href: `/dashboard/orders?status=PAID`,
       isActive: status === 'PAID',
     },
     {
-      title: 'Canceled',
+      title: 'Cancelado',
       href: `/dashboard/orders?status=CANCELED`,
       isActive: status === 'CANCELED',
     },

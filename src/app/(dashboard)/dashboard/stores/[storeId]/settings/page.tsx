@@ -31,9 +31,9 @@ const UpdateStorePage = async ({
   return (
     <Card aria-labelledby='update-store-page-form-heading'>
       <CardHeader className='space-y-1'>
-        <CardTitle className='text-2xl'>Update your store</CardTitle>
+        <CardTitle className='text-2xl'>Atualize a sua loja</CardTitle>
         <CardDescription>
-          Update your store name and description, or delete it
+        Atualize o nome e a descrição da sua loja ou exclua-a
         </CardDescription>
       </CardHeader>
       <CardContent>

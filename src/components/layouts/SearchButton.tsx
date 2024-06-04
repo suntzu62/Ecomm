@@ -84,13 +84,13 @@ const SearchButton = () => {
         <CommandInput
           value={query}
           onValueChange={setQuery}
-          placeholder='Search products...'
+          placeholder='Procurar Produtos...'
         />
         <CommandList>
           <CommandEmpty
             className={cn(isPending ? 'hidden' : 'py-6 text-center text-sm')}
           >
-            No products found.
+            Produto não encontrado
           </CommandEmpty>
           {isPending ? (
             <div className='space-y-1 overflow-hidden px-1 py-2'>

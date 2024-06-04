@@ -61,13 +61,13 @@ const UserAccountNav: React.FC<UserAccountNavProps> = ({ user }) => {
           <DropdownMenuItem asChild>
             <Link href='/dashboard/orders'>
               <ShoppingBag className='mr-2 h-4 w-4' aria-hidden='true' />
-              Orders
+              Pedidos
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem asChild>
             <Link href='/dashboard/stores'>
               <LayoutDashboard className='mr-2 h-4 w-4' aria-hidden='true' />
-              My Dashboard
+               Dashboard
             </Link>
           </DropdownMenuItem>
         </DropdownMenuGroup>

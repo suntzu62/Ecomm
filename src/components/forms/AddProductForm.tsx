@@ -50,7 +50,7 @@ export function AddProductForm() {
         `/api/stores/${params.storeId}/products`,
         values,
       )
-      toast.success('Product is created.')
+      toast.success('Produto criado!')
       router.push(`/${data.storeId}/${data.slug}?productId=${data.id}`)
     } catch (error: any) {
       toast.error(error.response.data)
@@ -70,10 +70,10 @@ export function AddProductForm() {
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nome</FormLabel>
               <FormControl>
                 <Input
-                  placeholder='Type product name here.'
+                  placeholder='Digite o nome do produto aqui.'
                   disabled={isLoading}
                   {...field}
                 />
@@ -87,10 +87,10 @@ export function AddProductForm() {
           name='description'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Description</FormLabel>
+              <FormLabel>Descrição</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Type product description here.'
+                  placeholder='Digite a descrição do produto aqui.'
                   disabled={isLoading}
                   {...field}
                 />
@@ -105,7 +105,7 @@ export function AddProductForm() {
             name='category'
             render={({ field }) => (
               <FormItem className='flex-1 w-full'>
-                <FormLabel>Category</FormLabel>
+                <FormLabel>Categoria</FormLabel>
                 <Select
                   value={field.value}
                   onValueChange={(value: typeof field.value) =>
@@ -114,7 +114,7 @@ export function AddProductForm() {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder='Select a category' />
+                      <SelectValue placeholder='Selecionar Categoria' />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -180,8 +180,8 @@ export function AddProductForm() {
           )}
         />
         <Button isLoading={isLoading}>
-          Add Produtos
-          <span className='sr-only'>Add Produtos</span>
+          Add Produto
+          <span className='sr-only'>Add Produto</span>
         </Button>
       </form>
     </Form>

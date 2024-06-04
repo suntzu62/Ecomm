@@ -20,18 +20,18 @@ export type ProductColumn = {
 export const columns: ColumnDef<ProductColumn>[] = [
   {
     accessorKey: 'name',
-    header: 'Name',
+    header: 'Nome',
     cell: ({ row }) => (
       <div className='truncate max-w-[300px]'>{row.original.name}</div>
     ),
   },
   {
     accessorKey: 'category',
-    header: 'Category',
+    header: 'Categoria',
   },
   {
     accessorKey: 'price',
-    header: 'Price',
+    header: 'Preço',
   },
   {
     accessorKey: 'createdAt',

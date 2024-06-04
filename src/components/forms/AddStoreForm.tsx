@@ -54,10 +54,10 @@ export function AddStoreForm() {
           name='name'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nome</FormLabel>
               <FormControl>
                 <Input
-                  placeholder='Type store name here.'
+                  placeholder='Digite o nome da loja aqui.'
                   disabled={isLoading}
                   {...field}
                 />
@@ -71,10 +71,10 @@ export function AddStoreForm() {
           name='description'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Description</FormLabel>
+              <FormLabel>Descrição</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Type store description here.'
+                  placeholder='Digite a descrição da loja aqui.'
                   disabled={isLoading}
                   {...field}
                 />
@@ -84,8 +84,8 @@ export function AddStoreForm() {
           )}
         />
         <Button isLoading={isLoading}>
-          Add Store
-          <span className='sr-only'>Add Store</span>
+          Add Loja
+          <span className='sr-only'>Add Loja</span>
         </Button>
       </form>
     </Form>

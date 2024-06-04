@@ -27,7 +27,7 @@ export default async function ProductsPage({
     name: item.name,
     slug: item.slug,
     storeId: item.storeId,
-    category: item.Category.name,
+    category: item.Category? item.Category.name : '',
     createdAt: item.createdAt,
   }))
 

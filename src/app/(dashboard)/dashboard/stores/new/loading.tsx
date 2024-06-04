@@ -8,8 +8,8 @@ export default function AddNewStoreLoading() {
     <>
       <div className="flex items-center justify-between">
         <Heading
-          title="New Store"
-          description="Add a new store to your account"
+          title="Nova loja"
+          description="Adicione uma nova loja à sua contat"
         />
       </div>
       <Separator className="my-4" />

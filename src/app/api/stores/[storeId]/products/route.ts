@@ -48,7 +48,7 @@ export async function POST(
         slug,
         categoryId: category,
         storeId: params.storeId,
-        price,
+        price: price.toString(),
         images,
       },
     })

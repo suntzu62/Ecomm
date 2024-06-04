@@ -51,13 +51,13 @@ const MobileNav = () => {
                         onClick={() => setIsOpen(false)}
                         href='/dashboard/orders'
                       >
-                        Orders
+                        Pedidos
                       </Link>
                       <Link
                         onClick={() => setIsOpen(false)}
                         href='/dashboard/stores'
                       >
-                        Stores
+                        Lojas
                       </Link>
                     </div>
                   </AccordionContent>

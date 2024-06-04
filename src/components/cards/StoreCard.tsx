@@ -42,7 +42,7 @@ export function StoreCard({ store }: StoreCardProps) {
               }),
             )}
           >
-            Add Product
+            Adicionar produto
           </p>
         </CardContent>
       </Card>

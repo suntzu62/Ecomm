@@ -6,7 +6,7 @@ export default function StoresLoading() {
   return (
     <>
       <div className='flex items-center justify-between'>
-        <Heading title='Stores' description='Manage your stores' />
+        <Heading title='Lojas' description='Gerencie suas lojas' />
       </div>
       <Separator className='my-4' />
       <section className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>

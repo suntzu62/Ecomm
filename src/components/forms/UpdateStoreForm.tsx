@@ -81,10 +81,10 @@ export const UpdateStoreForm: React.FC<UpdateStoreFormProps> = ({ store }) => {
             name='name'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nome</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder='Type store name here.'
+                    placeholder='Digite o nome da loja aqui.'
                     disabled={isLoading}
                     {...field}
                   />
@@ -98,10 +98,10 @@ export const UpdateStoreForm: React.FC<UpdateStoreFormProps> = ({ store }) => {
             name='description'
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Description</FormLabel>
+                <FormLabel>Descrição</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder='Type store description here.'
+                    placeholder='Digite a descrição da loja aqui.'
                     disabled={isLoading}
                     {...field}
                   />
@@ -112,8 +112,8 @@ export const UpdateStoreForm: React.FC<UpdateStoreFormProps> = ({ store }) => {
           />
           <div className='flex flex-col gap-2 xl:flex-row'>
             <Button isLoading={isLoading}>
-              Update store
-              <span className='sr-only'>Update store</span>
+              Atualizar Loja
+              <span className='sr-only'>Atualizar loja</span>
             </Button>
             <Button
               onClick={(e) => {
@@ -121,8 +121,8 @@ export const UpdateStoreForm: React.FC<UpdateStoreFormProps> = ({ store }) => {
                 setOpen(true)
               }}
               variant='destructive'>
-              Delete store
-              <span className='sr-only'>Delete store</span>
+              Deletar loja
+              <span className='sr-only'>Deletar loja</span>
             </Button>
           </div>
         </form>

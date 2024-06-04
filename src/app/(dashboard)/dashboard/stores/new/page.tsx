@@ -14,8 +14,8 @@ const CreateStorePage = async () => {
     <>
       <div className='flex items-center justify-between'>
         <Heading
-          title='New Store'
-          description='Add a new store to your account'
+          title='Nova Loja'
+          description='Adicione uma nova loja à sua conta'
         />
       </div>
       <Separator className='my-4' />
@@ -24,8 +24,8 @@ const CreateStorePage = async () => {
         aria-labelledby='new-store-page-form-heading'
       >
         <CardHeader className='space-y-1'>
-          <CardTitle className='text-2xl'>Add store</CardTitle>
-          <CardDescription>Add a new store to your account</CardDescription>
+          <CardTitle className='text-2xl'>Add loja</CardTitle>
+          <CardDescription>Adicione uma nova loja à sua conta</CardDescription>
         </CardHeader>
         <CardContent>
           <AddStoreForm />

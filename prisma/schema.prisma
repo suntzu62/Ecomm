@@ -16,12 +16,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String? 
+  refresh_token     String?
   access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? 
+  id_token          String?
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -39,7 +39,7 @@ model Session {
 
 model VerificationToken {
   identifier String
-  token      String @id  @map("_id")
+  token      String   @id @map("_id")
   expires    DateTime
 
   @@unique([identifier, token])
@@ -58,9 +58,10 @@ model User {
 }
 
 model Store {
-  id          String     @id @default(auto()) @map("_id") @db.ObjectId
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  slug        String      @unique
   name        String
-  description String?     
+  description String?
   userId      String
   User        User        @relation(fields: [userId], references: [id])
   createdAt   DateTime    @default(now())
@@ -81,13 +82,13 @@ model Product {
   id          String      @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   slug        String
-  description String?     
+  description String?
   price       String
   images      Json
   storeId     String
   Store       Store       @relation(fields: [storeId], references: [id])
-  categoryId  String
-  Category    Category    @relation(fields: [categoryId], references: [slug])
+  categoryId  String?
+  Category    Category?    @relation(fields: [categoryId], references: [slug])
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
   orderItems  OrderItem[]
@@ -102,15 +103,15 @@ enum TRANSACTION_STATUS {
 }
 
 model Order {
-  id               String           @id @default(auto()) @map("_id") @db.ObjectId
-  totalPrice       String
-  token            String
-  status           TRANSACTION_STATUS
-  userId           String
-  User             User               @relation(fields: [userId], references: [id])
-  createdAt        DateTime           @default(now())
-  updatedAt        DateTime           @updatedAt
-  orderItems       OrderItem[]
+  id         String             @id @default(auto()) @map("_id") @db.ObjectId
+  totalPrice String
+  token      String
+  status     TRANSACTION_STATUS
+  userId     String
+  User       User               @relation(fields: [userId], references: [id])
+  createdAt  DateTime           @default(now())
+  updatedAt  DateTime           @updatedAt
+  orderItems OrderItem[]
 
   @@index([userId])
 }

@@ -22,10 +22,10 @@ const StorePage = async () => {
   return (
     <>
       <div className='flex items-center justify-between'>
-        <Heading title='Stores' description='Manage your stores' />
+        <Heading title='Lojas' description='Gerencie suas lojas' />
         {stores.length > 0 && (
           <Link className={buttonVariants()} href='/dashboard/stores/new'>
-            Create store
+            Criar loja
           </Link>
         )}
       </div>
@@ -38,9 +38,9 @@ const StorePage = async () => {
         </section>
       ) : (
         <section className='flex h-[50vh] text-center gap-4 flex-col items-center justify-center'>
-          <h2 className='font-semibold text-2xl'>You dont have any store</h2>
+          <h2 className='font-semibold text-2xl'>Você não tem nenhuma loja</h2>
           <Link className={buttonVariants()} href='/dashboard/stores/new'>
-            Create a new store
+            Criar uma nova loja
           </Link>
         </section>
       )}
