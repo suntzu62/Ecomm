@@ -51,7 +51,7 @@ export async function PATCH(
         description,
         slug,
         categoryId: category,
-        price,
+        price: String(price),
         images,
       },
     })

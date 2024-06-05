@@ -22,7 +22,6 @@ export default async function ProductsPage({
 
   const formattedData: ProductColumn[] = data.map((item) => ({
     id: item.id,
-    // @ts-expect-error
     price: formatPrice(parseFloat(item.price)),
     name: item.name,
     slug: item.slug,

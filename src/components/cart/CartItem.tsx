@@ -51,7 +51,6 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
             </p>
           </div>
 
-          {/* @ts-expect-error Decimal type */}
           {formatPrice(parseFloat(data.price))}
         </div>
       </div>

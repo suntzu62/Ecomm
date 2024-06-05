@@ -57,7 +57,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <div className='flex items-center justify-between'>
             {/* Price */}
             <div className='font-semibold text-emerald-700'>
-              {/* @ts-expect-error */}
               {formatPrice(parseFloat(product.price))}
             </div>
             <div className='flex justify-center group/icon'>

@@ -60,7 +60,6 @@ export default async function InvoicePage({
           <div className='flex items-center justify-between text-orange-500'>
             <p className='font-bold sm:text-xl mr-2'>Total :</p>
             <p className='text-right font-bold'>
-              {/* @ts-expect-error Decimal type */}
               {formatPrice(parseFloat(order.totalPrice))}
             </p>
           </div>

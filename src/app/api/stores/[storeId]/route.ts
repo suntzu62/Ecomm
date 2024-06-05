@@ -40,7 +40,6 @@ export async function PATCH(
         userId: session.user.id,
       },
       data: {
-        id: slug,
         name,
         description,
       },

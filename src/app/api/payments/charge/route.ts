@@ -75,7 +75,7 @@ export async function POST(req: Request) {
       data: {
         id: order_id,
         userId: session?.user.id,
-        totalPrice: gross_amount,
+        totalPrice: gross_amount.toString(),
         status: 'PENDING',
         token: transaction.token,
         orderItems: {

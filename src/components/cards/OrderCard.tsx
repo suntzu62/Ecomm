@@ -106,7 +106,6 @@ const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
           <div className='flex items-center justify-between py-3'>
             <p className='font-bold sm:text-xl mr-2'>Total :</p>
             <p className='text-right font-bold'>
-              {/* @ts-expect-error Decimal type */}
               {formatPrice(parseFloat(order.totalPrice))}
             </p>
           </div>
